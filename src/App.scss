@@ -1,0 +1,31 @@
+.app {
+  padding: 16px;
+  text-align: center;
+
+  button {
+    margin: 24px 0;
+    padding: 8px 16px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 18px;
+    font-family: var(--font);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .cards {
+    display: grid;
+    gap: 16px;
+    place-content: center;
+    grid-template-columns: repeat(4, 160px);
+    grid-template-rows: repeat(4, 160px);
+  }
+
+  .turns {
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}

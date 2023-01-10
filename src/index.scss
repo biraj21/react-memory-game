@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  // --bg-color: #24292e;
+  --bg-color: #111;
+  --font: "Nunito", sans-serif;
+  font-family: var(--font);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: #fff;
+}
