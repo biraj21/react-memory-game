@@ -13,6 +13,11 @@
     color: #fff;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 300ms;
+
+    &:hover {
+      background-color: #000;
+    }
   }
 
   .cards {
@@ -21,11 +26,26 @@
     place-content: center;
     grid-template-columns: repeat(4, 160px);
     grid-template-rows: repeat(4, 160px);
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(4, 120px);
+      grid-template-rows: repeat(4, 120px);
+    }
+
+    @media screen and (max-width: 568px) {
+      grid-template-columns: repeat(4, 90px);
+      grid-template-rows: repeat(4, 90px);
+    }
+
+    @media screen and (max-width: 458px) {
+      grid-template-columns: repeat(4, 70px);
+      grid-template-rows: repeat(4, 70px);
+    }
   }
 
   .turns {
     margin-top: 24px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
   }
 }

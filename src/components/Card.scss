@@ -17,8 +17,8 @@
     transition-delay: 0ms;
 
     svg {
-      width: 120px;
-      height: 120px;
+      width: 75%;
+      height: 75%;
     }
   }
 
@@ -26,7 +26,7 @@
     height: 100%;
     background-color: #000;
     background-image: url("/images/card_bg.png");
-    background-size: 48px;
+    background-size: max(30%, 28px);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
@@ -37,13 +37,13 @@
     &::before {
       content: "";
       display: block;
-      width: 20px;
-      height: 20px;
+      width: 13%;
+      height: 13%;
       background-color: #111;
       border-radius: 50%;
       position: absolute;
-      top: 12px;
-      left: 12px;
+      top: 7.5%;
+      left: 7.5%;
     }
   }
 
