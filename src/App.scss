@@ -1,6 +1,7 @@
 .app {
   text-align: center;
   position: relative;
+  color: var(--accent-color);
 
   header {
     background-color: var(--bg-color);
@@ -13,7 +14,6 @@
     top: 0;
     left: 0;
     z-index: 1;
-    color: var(--accent-color);
 
     svg {
       width: 26px;

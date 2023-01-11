@@ -60,7 +60,8 @@
 
   &--matched {
     .card__front {
-      background-color: rgba(52, 166, 52, 0.3);
+      // background-color: rgba(52, 166, 52, 0.3);
+      background-color: var(--accent-color-faded);
     }
   }
 }
