@@ -12,7 +12,7 @@ const cardsData = [
   { svg: <Headphones color="#9d94ff" /> },
   { svg: <Smile color="#ffb480" /> },
   { svg: <Speaker color="#c780e8" /> },
-].map((card, i) => ({ ...card, matched: false, pairNo: i }));
+].map((card, i) => ({ ...card, matched: false, groupNo: i }));
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -26,18 +26,16 @@ function App() {
     if (choiceOne && choiceTwo) {
       setTurns(turns + 1);
 
-      if (choiceOne.pairNo === choiceTwo.pairNo) {
+      if (choiceOne.groupNo === choiceTwo.groupNo) {
         setCards((prevCards) => {
           return prevCards.map((card) => {
-            if (card.pairNo === choiceOne.pairNo) {
+            if (card.groupNo === choiceOne.groupNo) {
               return { ...card, matched: true };
             }
 
             return card;
           });
         });
-      } else {
-        console.log("Doesn't match!");
       }
 
       setTimeout(resetChoices, 1000);
@@ -63,24 +61,33 @@ function App() {
   }
 
   function handleCardClick(card) {
+    if (choiceOne && choiceTwo) {
+      return;
+    }
+
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
   }
 
   return (
     <div className="app">
-      <h1>Memory Pairs</h1>
-      <button onClick={reset}>New Game</button>
-      <div className="cards">
-        {cards.map((card, i) => (
-          <Card
-            card={card}
-            key={i}
-            flipped={card === choiceOne || card === choiceTwo || card.matched}
-            handleCardClick={handleCardClick}
-          />
-        ))}
-      </div>
-      <p className="turns">Turns: {turns}</p>
+      <header>
+        <h1>Memory Pairs</h1>
+      </header>
+
+      <main>
+        <button onClick={reset}>New Game</button>
+        <div className="cards">
+          {cards.map((card, i) => (
+            <Card
+              card={card}
+              key={i}
+              flipped={card === choiceOne || card === choiceTwo || card.matched}
+              handleCardClick={handleCardClick}
+            />
+          ))}
+        </div>
+        <p className="turns">Turns: {turns}</p>
+      </main>
     </div>
   );
 }

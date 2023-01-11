@@ -1,6 +1,21 @@
 .app {
-  padding: 16px;
   text-align: center;
+  position: relative;
+
+  header {
+    text-align: left;
+    box-shadow: 0px 1px 2px #000;
+    position: sticky;
+    padding: 16px 24px;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-color);
+    z-index: 1;
+  }
+
+  main {
+    padding: 16px 16px 24px;
+  }
 
   button {
     margin: 24px 0;

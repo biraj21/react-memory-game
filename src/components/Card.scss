@@ -39,7 +39,7 @@
       display: block;
       width: 13%;
       height: 13%;
-      background-color: #111;
+      background-color: var(--bg-color);
       border-radius: 50%;
       position: absolute;
       top: 7.5%;
@@ -56,6 +56,14 @@
     .card__back {
       transform: rotateY(90deg);
       transition-delay: 0ms;
+    }
+  }
+
+  &--matched {
+    border-color: #4dc24d;
+
+    .card__front {
+      background-color: #2e882e4d;
     }
   }
 }
