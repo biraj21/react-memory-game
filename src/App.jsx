@@ -1,4 +1,4 @@
-import { Airplay, Anchor, Box, Briefcase, Compass, Headphones, Smile, Speaker } from "react-feather";
+import { Airplay, Anchor, Box, Briefcase, Compass, Grid, Headphones, Smile, Speaker } from "react-feather";
 import Card from "./components/Card";
 import "./App.scss";
 import { useEffect, useState } from "react";
@@ -71,6 +71,7 @@ function App() {
   return (
     <div className="app">
       <header>
+        <Grid />
         <h1>Memory Pairs</h1>
       </header>
 

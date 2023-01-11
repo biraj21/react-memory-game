@@ -1,5 +1,4 @@
 .card {
-  border: 2px solid #fff;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
@@ -60,10 +59,8 @@
   }
 
   &--matched {
-    border-color: #4dc24d;
-
     .card__front {
-      background-color: #2e882e4d;
+      background-color: rgba(52, 166, 52, 0.3);
     }
   }
 }

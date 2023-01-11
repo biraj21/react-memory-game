@@ -3,14 +3,23 @@
   position: relative;
 
   header {
+    background-color: var(--bg-color);
     text-align: left;
     box-shadow: 0px 1px 2px #000;
+    display: flex;
+    align-items: center;
     position: sticky;
     padding: 16px 24px;
     top: 0;
     left: 0;
-    background-color: var(--bg-color);
     z-index: 1;
+    color: var(--accent-color);
+
+    svg {
+      width: 26px;
+      height: 26px;
+      margin-right: 8px;
+    }
   }
 
   main {
@@ -20,12 +29,12 @@
   button {
     margin: 24px 0;
     padding: 8px 16px;
-    border: 2px solid #fff;
+    border: 2px solid var(--accent-color);
     border-radius: 10px;
     background-color: transparent;
     font-size: 18px;
     font-family: var(--font);
-    color: #fff;
+    color: var(--accent-color);
     font-weight: 600;
     cursor: pointer;
     transition: background-color 300ms;
